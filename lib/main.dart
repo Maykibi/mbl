@@ -5,49 +5,31 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black, // фон экрана
         appBar: AppBar(
-          backgroundColor: Colors.pink,
-          title: Text("Demo App"),
+          title: Text("Мое первое приложение"),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Заголовок
-              Text(
-                "Что вкусно — то вкусно",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                ),
-              ),
-              SizedBox(height: 20), 
-
-              Container(
-                height: 120,
-                width: 300,
-                color: Colors.blue,
-                alignment: Alignment.center,
+        body: Column(
+          children: [
+            Text(
+              "Что вкусно — то вкусно",
+              style: TextStyle(fontSize: 24),
+            ),
+            Container(
+              color: Colors.blue,
+              height: 100,
+              width: 200,
+              child: Center(
                 child: Text(
                   "Я люблю вкусно покушать",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
